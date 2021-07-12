@@ -1,0 +1,30 @@
+{
+  "name": "curso-react-avancado",
+  "version": "1.0.0",
+  "private":"true",
+  "description": "curso react avancado",
+  "main": "none",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "boilerplate/src/**/*": [
+      "yarn lint --fix"
+    ] 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julioamoreno/Curso-React-Avancado.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Julioamoreno/Curso-React-Avancado/issues"
+  },
+  "homepage": "https://github.com/Julioamoreno/Curso-React-Avancado#readme",
+  "devDependencies": {
+    "husky": "^7.0.0",
+    "lint-staged": "^11.0.0"
+  }
+}
