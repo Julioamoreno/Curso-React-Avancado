@@ -6,12 +6,19 @@
   "main": "none",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-boilerplate": "cd boilerplate && npm run lint --fix",
+    "postinstall": "cd boilerplate && npx --no-install lint-staged",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "boilerplate/src/**/*": [
-      "yarn lint --fix"
+    "boilerplate": [
+      "npm run lint"
     ] 
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "cd boilerplate && npx --no-install lint-staged"
+    }
   },
   "repository": {
     "type": "git",
